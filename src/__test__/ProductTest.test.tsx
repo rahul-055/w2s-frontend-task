@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ProductComponent from '../components/Product/Product'; // Adjust the path if necessary
+import ProductComponent from '../components/ProductComponent/Product'; // Adjust the path if necessary
 import axios from 'axios';
 
 jest.mock('axios');

@@ -1,5 +1,5 @@
 import Form from "@/components/auth/login";  // Import the login form component
-import ProductComponent from "../components/Product/Product";  // Import the product component
+import ProductComponent from "../components/ProductComponent/Product";  // Import the product component
 import { useEffect, useState } from "react";
 import Loader from '@/ui/loader'   // Import the loader component
 export default function Home() {

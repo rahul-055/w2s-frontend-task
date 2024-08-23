@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Review from '../components/product/Review';
+import Review from '../components/ProductComponent/Review';
 
 describe('Review Component', () => {
     const mockHandleClose = jest.fn(); // Mock function for handleClose
