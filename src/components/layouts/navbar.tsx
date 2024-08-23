@@ -35,10 +35,13 @@ function Navbar() {
     // Close the user settings menu and log out by removing auth token
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
-        localStorage.removeItem('authToken');
-        window.location.reload();
+
     };
 
+    const logout = () => {
+        localStorage.removeItem('authToken');
+        window.location.reload();
+    }
     // Main AppBar component for the navigation bar
     return (
         <AppBar className='sticky top-0'>
@@ -136,11 +139,10 @@ function Navbar() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
+
+                            <MenuItem onClick={handleCloseUserMenu}>
+                                <Typography textAlign="center" onClick={logout}>Logout</Typography>
+                            </MenuItem>
                         </Menu>
                     </Box>
                 </Toolbar>
